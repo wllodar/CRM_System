@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+<head>
+
+<meta name="Description" content="Information architecture, Web Design, Web Standards." />
+<meta name="Keywords" content="your, keywords" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="author" content="" >
+<meta name="Robots" content="index,follow" />		
+
+<link rel="stylesheet" href="images/ind_bgr.css" type="text/css" />
+
+<title>CRMSystem</title>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" language="javascript">
+			$(document).ready(function() {
+				$('div#info').load('load.php'); 
+			});
+		</script>
+</script>
+</head>
+
+<body>
+<div id="main">
+<div id="logo">CRM SYSTEM</div>
+
+<div id="logseq">
+
+<form action="login.php"  name ="lform" class="loginform" method="post" onsubmit="if(this.login.value=='' || this.password.value==''){alert('podaj login i hasło'); return false}">
+				
+					<p class="log_info">Login :</p><br><input id="login" name="login" class="box" autofocus="autofocus" type="text" />
+					<br><br>
+					<p class="log_info">Hasło :</p><br><input id="password" name="password" class="box" type="password" />
+					<br><br>
+  					<input name="loginb" class="button" value="Login" type="submit" />
+					<input type="hidden" value="1" name="wyslany" />
+							
+			</form>
+			</div>
+			<div id="text">Informacje</div>
+			<div id="info"></div>
+</div>
+</body>
+</html>
